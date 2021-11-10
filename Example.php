@@ -1,7 +1,7 @@
 <?php
-$TOKEN = '2136648431:AAHXsTzbGPsyriY5TMHnSb0HERZ1Z7MwPEg'; //ваше токен, получен в BotFather
-$BOT_USERNAME = 'Example_s_bot'; // юзернейм бота (без собачки)
-$webhook =  'https://sellpd.000webhostapp.com/bax_100.php'; //ваша ссылка
+$TOKEN = '648680337:AAE14Tz0ENBheepmsfqrd1vWE_gTkDTYt30'; //ваше токен, получен в BotFather
+$BOT_USERNAME = 'bax100bot'; // юзернейм бота (без собачки)
+$webhook = 'https://sellpd.000webhostapp.com/bax_100.php'; //ваша ссылка
 
 $url = 'https://api.telegram.org/bot'.$TOKEN.'/';
 
@@ -13,22 +13,6 @@ $first_name = $json['message']['from']['first_name'];
 $ANSWER = "Ну привет, ".$first_name;
 sendMessage($uid,$ANSWER);
 
-$text = $json['message']['text'];
-
-switch($text){
-
- case '1':
-   $ANSWER = "Ти відправив одиницю";
- break;
-
- case 'скажіть пароль':
-   $ANSWER = 'jjcom';
- break;
-
- case 'Допобачення':
-    $ANSWER = "Допобачення";
- break;
-}
 
 function valid() {
 	$request_from_telegram = false;
